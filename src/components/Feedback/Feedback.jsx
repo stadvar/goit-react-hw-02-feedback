@@ -5,6 +5,12 @@ import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
 import Section from '../Section/Section';
 import Notification from '../Notification/Notification';
 
+const options = [
+  { id: 'id-1', label: 'good' },
+  { id: 'id-2', label: 'neutral' },
+  { id: 'id-3', label: 'bad' },
+];
+
 class Feedback extends Component {
   state = {
     good: 0,
@@ -36,11 +42,7 @@ class Feedback extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const options = [
-      { id: 'id-1', label: 'good' },
-      { id: 'id-2', label: 'neutral' },
-      { id: 'id-3', label: 'bad' },
-    ];
+
     return (
       <Section title="Please leave feedback">
         <FeedbackOptions
